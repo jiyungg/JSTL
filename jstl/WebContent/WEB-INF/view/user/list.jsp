@@ -1,6 +1,8 @@
+<%@page import="com.iot.test.vo.UserInfo"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/view/common/common.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/view/common/common.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,11 +10,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<br>
-유저리스트
-<br>
-<c:forEach items="${userList}" var="user">
-    유저번호 : ${user.uiNo}, 유저이름 : ${user.uiName}, 유저나이 : ${user.uiAge}<br>
-</c:forEach>
+유저리스트<br>
+<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+		</tr>
+		<c:forEach items="${userList}" var="ui">
+   <tr>
+       <td>${ui.uiName}</td>
+       <td>${ui.uiAge}</td>
+   </tr>
+   </c:forEach>
+</table>
 </body>
 </html>

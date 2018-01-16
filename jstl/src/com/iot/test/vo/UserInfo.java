@@ -1,41 +1,12 @@
-package com.jstl.test.vo;
+package com.iot.test.vo;
 
-public class UserClass {
-	
-	private int ciNo;
-	private String ciName;
-	private String ciDesc;
+public class UserInfo {
 	private int uiNo;
 	private String uiName;
 	private int uiAge;
 	private String uiId;
 	private String uiPwd;
-	private String uiRegdate;
-	private String address;
-	public int getCiNo() {
-		return ciNo;
-	}
-	@Override
-	public String toString() {
-		return "UserClass [ciNo=" + ciNo + ", ciName=" + ciName + ", ciDesc=" + ciDesc + ", uiNo=" + uiNo + ", uiName="
-				+ uiName + ", uiAge=" + uiAge + ", uiId=" + uiId + ", uiPwd=" + uiPwd + ", uiRegdate=" + uiRegdate
-				+ ", address=" + address + "]";
-	}
-	public void setCiNo(int ciNo) {
-		this.ciNo = ciNo;
-	}
-	public String getCiName() {
-		return ciName;
-	}
-	public void setCiName(String ciName) {
-		this.ciName = ciName;
-	}
-	public String getCiDesc() {
-		return ciDesc;
-	}
-	public void setCiDesc(String ciDesc) {
-		this.ciDesc = ciDesc;
-	}
+	private int ciNo;
 	public int getUiNo() {
 		return uiNo;
 	}
@@ -66,6 +37,12 @@ public class UserClass {
 	public void setUiPwd(String uiPwd) {
 		this.uiPwd = uiPwd;
 	}
+	public int getCiNo() {
+		return ciNo;
+	}
+	public void setCiNo(int ciNo) {
+		this.ciNo = ciNo;
+	}
 	public String getUiRegdate() {
 		return uiRegdate;
 	}
@@ -73,9 +50,17 @@ public class UserClass {
 		this.uiRegdate = uiRegdate;
 	}
 	public String getAddress() {
-		return address;
+		return Address;
 	}
 	public void setAddress(String address) {
-		this.address = address;
+		Address = address;
 	}
+	@Override
+	public String toString() {
+		return "UserInfo [uiNo=" + uiNo + ", uiName=" + uiName + ", uiAge=" + uiAge + ", uiId=" + uiId + ", uiPwd="
+				+ uiPwd + ", ciNo=" + ciNo + ", uiRegdate=" + uiRegdate + ", Address=" + Address + "]";
+	}
+	private String uiRegdate;
+	private String Address;
+
 }
